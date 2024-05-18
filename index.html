@@ -7,13 +7,18 @@
     <meta name="author" content="Lauren DeCamps">
     <title>Cool Pics 📷</title>
     <link rel="stylesheet" href="coolpics.css">
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
         <button id="menu-toggle">Menu</button>
         <nav>
-            <ul>
+            <ul class="hide">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">About</a></li>
@@ -33,6 +38,21 @@
     <footer>
         <p>©2023 Not a real site 😀</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.getElementById("menu-toggle");
+            const menuItems = document.querySelector("nav ul");
+
+            // Hide menu items by default
+            menuItems.classList.add("hide");
+
+            // Add click event listener to the menu button
+            menuButton.addEventListener("click", function() {
+                // Toggle visibility of menu items
+                menuItems.classList.toggle("hide");
+            });
+        });
+    </script>
     <script src="coolpics.js"></script>
 </body>
 </html>
