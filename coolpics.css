@@ -28,7 +28,7 @@ a:visited {
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 1em;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,13 +47,39 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 1em;
+    margin-right: 20px;
 }
-
+nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
 main {
     padding: 1em;
 }
-
+.viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: grid;
+            place-items: center;
+        }
+        .viewer img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .close-viewer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
